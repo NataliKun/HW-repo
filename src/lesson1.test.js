@@ -19,7 +19,7 @@ test("Sum num user", () =>{
 
 const lesson2 = require('./lesson2');
 
-test('a b diference ', () => {
+  test('a b diference ', () => {
     expect(lesson2.difference(1, 2)).toBe(2);
     expect(lesson2.difference(1, 1)).toBe("equal");
     expect(lesson2.difference(1, "a")).toBe("not number");
@@ -33,3 +33,15 @@ test('a b diference ', () => {
     window.prompt = jest.fn(() => {return "1234"});
     expect (lesson2.month()).toBe("number not correct");
 });
+
+const lesson3 = require('./lesson3');
+
+  test('retrn sum number 50-100', () => {
+    expect(lesson3.sum()).toBe(3825);
+  });
+
+  test('retrn table multiplication 7 ', () => {
+    expect(lesson3.mult()).toEqual( ["7*1=7", "7*2=14", "7*3=21", "7*4=28", "7*5=35", "7*6=42", "7*7=49", "7*8=56", "7*9=63"]);
+  });
+  
+
