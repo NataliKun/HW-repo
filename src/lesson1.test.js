@@ -46,9 +46,24 @@ const lesson3 = require('./lesson3');
   
 const lesson4 = require('./lesson4');
 
-test('obj admin', () => {
-window.prompt = jest.fn(() => {return "1"});
-expect (lesson4.userObj()).toBe("admin");
-window.prompt = jest.fn(() => {return "a"});
-expect (lesson4.userObj()).toBe("ne chislo");
+  test('obj admin', () => {
+    window.prompt = jest.fn(() => {return "1"});
+  expect (lesson4.userObj()).toBe("admin");
+    window.prompt = jest.fn(() => {return "a"});
+  expect (lesson4.userObj()).toBe("ne chislo");
 });
+
+const lesson5 = require('./lesson5');
+
+  test('return arr ', () => {
+    expect(lesson5.arrSum()).toBe(55);
+  });
+
+  test('return New arr ', () => {
+    expect(lesson5.newArr()).toEqual([2, 4, 6, 8, 10, 12, 14, 16, 18, 20]);
+  });
+  test('return diference arr ', () => {
+    expect(lesson5.differenceArr([1,2,3,4])).toEqual("1 4");
+    expect(lesson5.differenceArr("abc")).toBe("not arr");
+    expect(lesson5.differenceArr([1,2,3,4,'f'])).toEqual('arr not correct');
+  });
