@@ -67,3 +67,21 @@ const lesson5 = require('./lesson5');
     expect(lesson5.differenceArr("abc")).toBe("not arr");
     expect(lesson5.differenceArr([1,2,3,4,'f'])).toEqual('arr not correct');
   });
+
+const lesson6 = require('./lesson6');
+
+  test('more num', () => {
+    expect(lesson6.diff(1,2)).toBe(2);
+    expect(lesson6.diff(1,1)).toBe("equal");
+    expect(lesson6.diff(1,"e")).toBe("no correct");
+  });
+  test('one word', () => {
+    expect(lesson6.isWord("one")).toBe(true);
+    expect(lesson6.isWord("one two")).toBe(false);
+    expect(lesson6.isWord(1)).toBe("not string");
+  });
+  test('exponentiation', () => {
+    expect(lesson6.pow(2,3)).toBe(8);
+    expect(lesson6.pow('a',1)).toBe("not number");
+
+  });
